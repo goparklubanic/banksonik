@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BANKSONIK</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  <script src="js/bse.js"></script>
+  <link rel="stylesheet" href="css/banksonik.css">
+</head>
+<body onLoad=yrScore()>
+  <div class='container-fluid'>
+	  <div class='page-header'>
+		  <p>SOAL LATIHAN <span id='psid'></span></p>
+	  </div>
+	  
+	  <h3>Selamat Telah Menjalani Latihan Soal</h3>
+	  <h4 id="score"></h4>
+	  <span id="logId"></span>
+	  <div>
+		  <a class='btn btn-primary form-control' href='index.html'><< Kembali</a>
+	  </div>
+	  <div class='panel-footer'>
+		  &copy; Komunitas Linux Banjarnegara 2017
+	  </div>
+  </div>
+</body>
+</html>
+<script>
+	function yrScore(){
+		var score = localStorage.getItem('score');
+		var paket = localStorage.getItem('psid');
+		var usrid = localStorage.getItem('user_id');
+		var usrnm = localStorage.getItem('user_nm');
+		
+		$("#score").html("Skor Akhir Anda: "+score);
+		saveHistory(paket,usrid,score);
+	}
+</script>

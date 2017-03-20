@@ -1,0 +1,42 @@
+/* *** tags *** */
+body {background-color:#AC988D;}
+
+
+/* *** class *** */
+.namaguru{font-size:8pt;}
+.page-header{clear-both; background-color:#555555; color: #DDDDDD; 
+	padding: 2px 0 2px 0; text-align: center;  margin-bottom:2px; 
+	width: 100%;}
+.page-header p{font-weight: bold; font-size: 16pt; 
+text-shadow: 0px 0px 3px #000;}
+.list-group {text-align: center;}
+
+.btn-primary{background:#800000; color: #E0E0E0;}
+.ps {text-align:left; font-size: 12pt; font-family: sans-serif;}
+.nso{padding: 10px 0 5px 10px;}
+.ctn-box{background: #5C5C5C; color: #C4C4C4; border: 2px solid #303030;}
+
+/* *** id *** */
+#hint{ background:#002647; color: #EEEEEE; font-family: monospace;
+	font-size:14pt; text-align: center; padding: 5px; display: block;}
+#score {display:block; background: #000; color: #EEE; padding: 5px;
+	font-weight: bold; margin-bottom: 4px;}
+#page-title{background:#606060; color: #FEFDFC; padding: 5px; 
+	text-align:center; margin-top:0px;}
+#page-title h4{margin:0; padding:0;}
+#page-title h5{margin:0; padding:0;}
+#dftQuest{text-align:left; background:#FFE2CC; color: #000; 
+	font-family:serif; font-size: 12pt; border: 1px solid: #000;
+	box-shadow: 0px 0px 5px #000; padding: 2px;}
+#welcomeGreet{text-align:center; font-weight:bold; color:#000;}
+/* *** komposit *** */
+.ilu img{max-width:280px;}
+.hint img{max-width:260px;}
+a.list-group-item {background-color:#303030; color: #DDDDDD;
+	border: 1px solid #000; border-radius: 5px;  margin-bottom: 1px;
+	box-shadow: 0px 0px 10px #505050;}
+.panel-footer{background:#000; color:#FFF; font-family:serif; 
+	font-size:8pt; text-align:center; padding: 10px;
+	}
+.ctn-box h4{background: #545454; display: block; text-align: center;
+	margin: 0; padding: 10px 0 10px 0;}
