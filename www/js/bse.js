@@ -11,7 +11,7 @@ $('document').ready(function(){
 		},
 		function(result){
 			splitucre(result);
-			window.location='index.html';
+			window.location='main.html';
 	});
   });
 });
@@ -66,5 +66,5 @@ function logOut(){
 	localStorage.setItem('user_id','00');
 	localStorage.setItem('user_nm','00');
 	localStorage.setItem('user_kl','00');
-	window.location='login.html';
+	window.location='index.html';
 }
