@@ -17,7 +17,7 @@ $('document').ready(function(){
 				}else{
 					var deklik = "onClick=gelarSoal("+paket.id+","+paket.soal+")>";
 				}
-				alert(olih);
+				
 				$('#dftPaket').append("<a class='list-group-item ps' "+
 					deklik+
 					" Paket No. "+paket.np+
