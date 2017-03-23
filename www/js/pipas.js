@@ -17,7 +17,7 @@ $('document').ready(function(){
 				}else{
 					var deklik = "onClick=gelarSoal("+paket.id+","+paket.soal+")>";
 				}
-				
+				alert(olih);
 				$('#dftPaket').append("<a class='list-group-item ps' "+
 					deklik+
 					" Paket No. "+paket.np+
@@ -33,17 +33,22 @@ $('document').ready(function(){
 function validPeriod(st,fh){
 	//new Date(year, month, day, hours, minutes, seconds, milliseconds)
 	var saiki = new Date();
-	var labuh = konvertWaktu(st);
-	var bubar = konvertWaktu(fh);
-	if(saiki > labuh && saiki < bubar){
+	if(st =='0000-00-00 00:00:00'){
 		var olih = '1';
 	}else{
-		var olih = '0';
+		var labuh = konvertWaktu(st);
+		var bubar = konvertWaktu(fh);
+		if(saiki > labuh && saiki < bubar){
+			var olih = '1';
+		}else{
+			var olih = '0';
+		}
 	}
 	return olih;
 }
 
 function konvertWaktu(wkt){
+	
 	var dj = wkt.split(' ');
 	
 	var dn = dj[0].split('-');
