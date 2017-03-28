@@ -9,23 +9,33 @@ $('document').ready(function(){
 	var kl = localStorage.getItem('user_kl');
 		$.getJSON(server+'?opr=pks&mp='+mpid+"&kl="+kl,function(data){
 			$("#dftPaket a").remove();
-			
+			var siki = new Date();
 			$.each(data,function(index,paket){
 				var olih = validPeriod(paket.start,paket.finish);
 				if(olih == '0' ){
-					var deklik = ">";
+					$('#dftPaket').append("<a class='list-group-item ps'>"+
+					" Paket No. "+paket.np+
+					"<span class='badge'>"+paket.soal+"</span><br/>"+
+					"<div class='timer'><label class='paket-label'>Mulai</label>: "+paket.start+"</div>"+
+					"<div class='timer'><label class='paket-label'>Sampai</label>: "+paket.finish+"</div>");
 				}else{
-					var deklik = "onClick=gelarSoal("+paket.id+","+paket.soal+")>";
+					$('#dftPaket').append("<a class='list-group-item ps' "+
+					" onClick=gelarSoal("+paket.id+","+paket.soal+")>" +
+					" Paket No. "+paket.np+
+					"<span class='badge'>"+paket.soal+"</span><br/>"+
+					"<div class='timer'><label class='paket-label'>Mulai</label>: "+paket.start+"</div>"+
+					"<div class='timer'><label class='paket-label'>Sampai</label>: "+paket.finish+"</div>");
 				}
-				
+				/*
 				$('#dftPaket').append("<a class='list-group-item ps' "+
-					deklik+
+					" onClick=gelarSoal("+paket.id+","+paket.soal+")>" +
 					" Paket No. "+paket.np+
 					"<span class='badge'>"+paket.soal+"</span><br/>"+
 					"<div class='timer'><label class='paket-label'>Mulai</label>: "+paket.start+"</div>"+
 					"<div class='timer'><label class='paket-label'>Sampai</label>: "+paket.finish+"</div>"
 					
 				);
+				*/ 
 			})
 		});
 		/* **** fungsi getJson **** */
@@ -38,6 +48,7 @@ function validPeriod(st,fh){
 	}else{
 		var labuh = konvertWaktu(st);
 		var bubar = konvertWaktu(fh);
+		alert(saiki+' - '+labuh+' '+bubar);
 		if(saiki > labuh && saiki < bubar){
 			var olih = '1';
 		}else{
@@ -53,7 +64,7 @@ function konvertWaktu(wkt){
 	
 	var dn = dj[0].split('-');
 	var taun = dn[0];
-	var sasi = dn[1];
+	var sasi = parseInt(dn[1])-1;
 	var dina = dn[2];
 	
 	var jm = dj[1].split(':');
