@@ -48,7 +48,6 @@ function validPeriod(st,fh){
 	}else{
 		var labuh = konvertWaktu(st);
 		var bubar = konvertWaktu(fh);
-		alert(saiki+' - '+labuh+' '+bubar);
 		if(saiki > labuh && saiki < bubar){
 			var olih = '1';
 		}else{
